@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Docker Networking</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My First Assignment</h1>
+        <p>Developed by: AVANEESH B</p>
+    </header>
+
+    <hr> 
+    
+    <main>
+        <section>
+            <h2>About This Project</h2>
+            <p>This page demonstrates basic HTML structure and <strong>Docker Networking</strong>. It is organized inside the <strong>iAssgn1</strong> repository folder.</p>
+        </section>
+
+  <p>Click the button to call the API container</p>
+
+  <button onclick="callAPI()">Call API</button>
+
+  <pre id="output"></pre>
+
+ <script>
+    function callAPI() {
+      fetch('/api')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('output').innerText = data;
+        })
+        .catch(err => {
+          document.getElementById('output').innerText = err;
+        });
+    }
+  </script>
+</body>
+</html>
